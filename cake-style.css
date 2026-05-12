@@ -1,0 +1,70 @@
+/* ============ BASE (Dark Theme) ============ */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1a0a14 0%, #3d0f2b 30%, #6b1839 60%, #8b1a4a 100%);
+    color: #f4e4e4;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+#hearts-canvas {
+    position: fixed; top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: 0; pointer-events: none;
+}
+
+/* ============ BACK BUTTON ============ */
+.back-btn {
+    position: fixed; top: 20px; left: 20px;
+    background: rgba(61, 15, 43, 0.85); backdrop-filter: blur(10px);
+    color: #ffb6c1; border: 2px solid rgba(255,105,180,0.4);
+    padding: 10px 22px; border-radius: 30px; cursor: pointer; z-index: 100;
+    font-weight: 600; font-size: 0.9rem; transition: all 0.3s ease;
+}
+.back-btn:hover { background: #8b1a4a; border-color: #ff69b4; transform: scale(1.05); }
+
+/* ============ MESSAGE ============ */
+.message-section { min-height: 70vh; display: flex; justify-content: center; align-items: center; padding: 100px 20px 40px; position: relative; z-index: 10; }
+.msg-card {
+    background: linear-gradient(135deg, rgba(61,15,43,0.7), rgba(139,26,74,0.4)); backdrop-filter: blur(15px);
+    border: 1px solid rgba(255,105,180,0.2); border-radius: 30px; padding: 50px;
+    max-width: 900px; width: 100%; box-shadow: 0 30px 80px rgba(0,0,0,0.4);
+}
+.msg-title { font-family: 'Great Vibes', cursive; font-size: clamp(2rem, 5vw, 3rem); color: #ffb6c1; text-align: center; margin-bottom: 35px; }
+.msg-text-side p { font-size: 1.2rem; line-height: 1.8; color: rgba(255,228,228,0.9); margin-bottom: 18px; }
+.msg-sign { font-family: 'Great Vibes', cursive; font-size: 1.8rem !important; color: #ff69b4 !important; margin-top: 20px; }
+
+/* ============ SLIDESHOW ============ */
+.gallery-section { padding: 40px 20px 100px; max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; position: relative; z-index: 10; }
+.gallery-title { font-family: 'Great Vibes', cursive; font-size: clamp(2rem, 5vw, 3rem); text-align: center; color: #ffb6c1; margin-bottom: 50px; }
+
+.slideshow-frame {
+    position: relative;
+    width: 100%; max-width: 600px; aspect-ratio: 4/3;
+    background: #000;
+    border-radius: 15px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+    overflow: hidden;
+}
+.slideshow-frame img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: opacity 1s ease-in-out;
+}
+.frame-border {
+    position: absolute; inset: 0;
+    border: 8px solid rgba(255,182,193,0.3);
+    border-radius: 15px;
+    pointer-events: none;
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.5);
+}
+
+/* ============ REVEAL ANIMATIONS ============ */
+.reveal { opacity: 0; transform: translateY(50px); transition: opacity 0.8s ease, transform 0.8s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ============ FOOTER ============ */
+.birthday-footer { text-align: center; padding: 40px 20px 60px; position: relative; z-index: 10; }
+.footer-text { font-family: 'Great Vibes', cursive; font-size: 1.8rem; color: rgba(255,182,193,0.5); }

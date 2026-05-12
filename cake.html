@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greetings & Memories 💌</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="cake-style.css">
+</head>
+<body>
+    <canvas id="hearts-canvas"></canvas>
+    <button class="back-btn" onclick="window.location.href='index.html'">← Back</button>
+
+    <!-- MESSAGE SECTION -->
+    <section class="message-section reveal">
+        <div class="msg-card">
+            <h2 class="msg-title">A Message For You 💕</h2>
+            <div class="msg-text-side">
+                <!-- EDIT YOUR MESSAGE HERE -->
+                <p>Today is all about celebrating you — the most wonderful person in my life. Every moment with you is a treasure, and I'm so grateful for your kindness, your laughter, and your beautiful heart.</p>
+                <p>May this year bring you everything you've been dreaming of and more. You deserve the world! 🌟</p>
+                <p class="msg-sign">— With all my love ❤️</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDESHOW SECTION -->
+    <section class="gallery-section reveal">
+        <h2 class="gallery-title">Our Memories 📸</h2>
+        <div class="slideshow-frame">
+            <!-- The slideshow will cycle through images listed in cake-script.js -->
+            <img id="slideshow-img" src="photo1.JPG" alt="Memory">
+            <div class="frame-border"></div>
+        </div>
+    </section>
+
+    <footer class="birthday-footer">
+        <p class="footer-text">Made with love ❤️</p>
+    </footer>
+
+    <script src="cake-script.js"></script>
+</body>
+</html>

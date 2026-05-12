@@ -1,0 +1,80 @@
+/* ============================================================
+   SHARED STYLES — Birthday Website (Maroon & Pink Theme)
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600;700&display=swap');
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1a0a14 0%, #3d0f2b 30%, #6b1839 60%, #8b1a4a 100%);
+    color: #f4e4e4;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* Hearts Canvas */
+#hearts-canvas {
+    position: fixed; top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: 0; pointer-events: none;
+}
+
+/* ============ NAVIGATION BUTTONS ============ */
+.nav-btn {
+    display: inline-block;
+    padding: 16px 45px; font-size: 1.2rem;
+    background: linear-gradient(45deg, #d4497d, #ff69b4);
+    border: none; border-radius: 50px; color: white;
+    cursor: pointer; font-family: 'Poppins', sans-serif; font-weight: 600;
+    box-shadow: 0 10px 30px rgba(212,73,125,0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+}
+.nav-btn:hover { transform: scale(1.05) translateY(-3px); box-shadow: 0 15px 40px rgba(255,105,180,0.5); }
+
+.back-btn {
+    position: fixed; top: 20px; left: 20px;
+    background: rgba(61,15,43,0.85); backdrop-filter: blur(10px);
+    color: #ffb6c1; border: 2px solid rgba(255,105,180,0.4);
+    padding: 10px 22px; border-radius: 30px; cursor: pointer; z-index: 100;
+    font-weight: 600; font-size: 0.9rem; transition: all 0.3s ease;
+}
+.back-btn:hover { background: #8b1a4a; border-color: #ff69b4; transform: scale(1.05); }
+
+/* ============ COMMON TEXT ============ */
+.script-font { font-family: 'Great Vibes', cursive; }
+.shimmer-text {
+    background: linear-gradient(135deg, #ffb6c1, #ff69b4, #d4497d, #ffb6c1);
+    background-size: 300% 300%;
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 4s ease infinite;
+}
+@keyframes shimmer { 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} }
+
+/* ============ PAGE TRANSITION ============ */
+.page-fade { position: fixed; inset: 0; background: #1a0a14; z-index: 9999; opacity: 0; pointer-events: none; transition: opacity 0.6s ease; }
+.page-fade.active { opacity: 1; pointer-events: all; }
+
+/* ============ CENTERED LAYOUT ============ */
+.page-center {
+    min-height: 100vh; display: flex; flex-direction: column;
+    justify-content: center; align-items: center;
+    position: relative; z-index: 10; padding: 40px 20px;
+    text-align: center;
+}
+
+/* ============ REVEAL ANIMATIONS ============ */
+.reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.8s ease, transform 0.8s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+@keyframes fadeInUp { 0%{opacity:0;transform:translateY(40px)} 100%{opacity:1;transform:translateY(0)} }
+@keyframes fadeIn { 0%{opacity:0} 100%{opacity:1} }
+@keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-15px)} }
+@keyframes pulse { 0%,100%{opacity:0.5} 50%{opacity:1} }
+
+/* ============ FOOTER ============ */
+.birthday-footer { text-align: center; padding: 40px 20px 60px; position: relative; z-index: 10; }
+.footer-text { font-family: 'Great Vibes', cursive; font-size: 1.8rem; color: rgba(255,182,193,0.5); }
