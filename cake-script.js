@@ -1,10 +1,15 @@
 // ============ SLIDESHOW LOGIC ============
 const images = [
     'photo6.JPG',
-    'photo5.jpg',
-    'photo3.jpg',
-    'photo4.jpg',
-    'photo7.jpg'
+    'photo5.JPG',
+    'photo3.JPG',
+    'photo4.JPG',
+    'photo7.JPG',
+    'photo8.JPG',
+    'photo9.JPG',
+    'photo10.JPG',
+    'photo11.JPG',
+    'photo12.JPG'
 ];
 // If you have more photos, just add them to the list above!
 
